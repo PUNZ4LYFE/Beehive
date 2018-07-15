@@ -19,7 +19,7 @@ class BeeComponent {
                 var currentbee = event.path[1].bee;
                 console.log(event.path[1].bee.posts[0]);
                 for(var i = 0; i > currentbee.posts.length; i++){
-                        var postTestUI = new PostComponent(event.path[1].bee.posts[0]);
+                        var postUI = new PostComponent(event.path[1].bee.posts[i]);
                 }             
         }
 
