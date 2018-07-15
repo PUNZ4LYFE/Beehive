@@ -30,7 +30,7 @@ function init() {
     //document.getElementById('botonUpdate').onclick = updatePost;
     //document.getElementById('botonComentar').onclick = crearComment;
 
-    function onClickSelectPost(event) {
+    /*function onClickSelectPost(event) {
         if (selectedPostComponent !== null) {
             removeSelected();
         }
@@ -42,7 +42,7 @@ function init() {
     function removeSelected(event) {
         selectedPostComponent.classList.remove('selected');
         selectedPostComponent.classList.add('postStyle');
-    }
+    }*/
 
     function requestAllPosts() {
         var request = new XMLHttpRequest();
