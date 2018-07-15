@@ -1,0 +1,123 @@
+@font-face {
+    font-family: champagne;
+    src: url(fonts/champagne.ttf);
+}
+
+@font-face {
+    font-family: claudia;
+    src: url(fonts/claudia.ttf);
+}
+
+body {
+    width: 100%;
+    max-width: 1500px;
+    background-image: url('hexagon.png');
+}
+
+.tituloPrincipal {
+    background-color: #230C0F;
+    font-family: champagne;
+    font-size: 45px;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 0px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+}
+
+#bees, #beesPosts, #beesToDos {
+    width: 30%;
+    margin-right: 5%;
+}
+
+.postStyle {
+    background-color: #EDD892;
+    width: 100%;
+    padding: 2px;
+    border-radius: 6px;
+    display: block;
+    margin: 22px;
+    padding-bottom: 10px;
+
+}
+
+
+.selected {
+    background-color: #797596;
+    width: 97%;
+    padding: 2px;
+    border-radius: 6px;
+    display: block;
+    margin: 22px;
+    padding-bottom: 10px;
+}
+
+.beeStyle {
+    background-color: #CBA328;
+    width: 100%;
+    padding: 2px;
+    border-radius: 6px;
+    display: block;
+    margin: 22px;
+    padding-bottom: 10px;
+}
+
+.beeStyle h2, .postStyle h2, .selected h2 {
+    font-family: champagne;
+    color: maroon;
+    margin-left: 20px;
+    user-select: none;
+    pointer-events: none;
+    font-size: 30px;
+}
+
+.beeStyle p, .selected p, .postStyle p, .selected p {
+    margin-left: 20px;
+    font-family: champagne;
+    user-select: none;
+    pointer-events: none;
+    font-size: 18px;
+}
+
+.beeStyle input {
+    background-color: #330F0A;
+    color: white;
+    font-family: champagne;
+    border: none;
+    padding: 8x;
+    border-radius: 2px;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.botones {
+    margin-left: 37%;
+}
+
+.editable {
+    background-color: #EAD637;
+}
+
+#titulo, #cuerpo, #comentario {
+    background-color: #AFD2E9;
+    border: solid 1px #0B1D51;
+    padding: 5px;
+    color: black;
+    font: champagne 16px;
+}
+
+.comment {
+    background-color: #9D96B8;
+    border-radius: 6px;
+    width: 700px;
+    margin-left: 2%;
+    padding: 1px;
+    margin-bottom: 10px;
+}
