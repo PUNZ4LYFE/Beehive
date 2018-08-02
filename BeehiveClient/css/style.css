@@ -1,0 +1,84 @@
+/* Add your amazing style here! */
+
+.mainButtons {
+    background-color: #F2D492;
+    padding-left: 38%;
+    height: 50px;
+    padding-top: 15px;
+}
+
+.mainButtons button {
+    padding: 8px;
+    font-size: 18px;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #F1E8B8;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; 
+    border-radius: 6px;
+    border: none;
+}
+
+#close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal input {
+    margin-left: 17%;
+    width: 300px;
+    padding: 5px;
+    margin-top: 10px;
+    background-color: #F1E8B8;
+    color: black;
+    border: solid 1px black;
+}
+
+::placeholder {
+    color: black;
+}
+
+.modal button {
+    margin-left: 40%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.modal textarea {
+    margin-top: 10px;
+    width: 300px;
+    height: 100px;
+    margin-left: 17%;
+    padding: 5px;
+    background-color: #F1E8B8;
+    color: black;
+    border: solid 1px black;
+}
+
+.modal select {
+    margin-top: 10px;
+    width: 312px;
+    margin-left: 17%;
+    padding: 5px;
+    background-color: #F1E8B8;
+    color: black;
+    border: solid 1px black;
+}

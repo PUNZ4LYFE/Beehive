@@ -1,0 +1,28 @@
+@font-face {
+    font-family: champagne;
+    src: url(fonts/champagne.ttf);
+}
+
+@font-face {
+    font-family: claudia;
+    src: url(fonts/claudia.ttf);
+}
+
+.h2bees {
+	background-color: #230C0F;
+	font-size: 32px;
+	text-align: center;
+	color: white;
+	font-family: champagne;
+	padding: 0px;
+	margin: 0px;
+}
+
+.beesComponent{
+	width: 50%;
+	height: auto;
+}
+
+.inputBee {
+	display: block;
+}

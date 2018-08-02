@@ -1,0 +1,37 @@
+/*.postComponent{
+	background-color: aquamarine;
+	width: auto;
+	height: auto;
+	margin-bottom: 5px;
+}*/
+
+
+.postComponent{
+	background-color: #EAD637;
+	font-family: champagne;
+	color: maroon;
+	margin-left: 20px;
+	user-select: none;
+	pointer-events: none;
+	font-size: 16px;
+	border-radius: 6px;
+}
+
+.postComponent h3 { 
+	padding: 10px;
+	margin-bottom: 0px;
+}
+
+
+button {    
+	background-color: #330F0A;
+    color: white;
+    font-family: champagne;
+    border: none;
+    padding: 5px;
+    border-radius: 2px;
+    margin-left: 20px;
+	font-size: 14px;
+	margin-top: 0px;
+}
+

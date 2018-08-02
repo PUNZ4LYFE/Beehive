@@ -1,0 +1,18 @@
+.commentComponent {
+	background-color: #EDD892;
+	width: auto;
+	height: auto;
+	border-radius: 6px;
+	margin-bottom: 5px;
+}
+
+.commentComponent h4 { 
+	padding: 10px 10px 0px 10px;
+	margin-bottom: 0px;
+}
+
+.commentComponent p { 
+	padding: 0px 10px 10px 10px;
+	margin-top: 0px;
+	
+}

@@ -1,0 +1,14 @@
+.todoComponent {	
+    background-color: #EAD637;
+	font-family: champagne;
+	color: maroon;
+	margin-left: 20px;
+	user-select: none;
+	pointer-events: none;
+	font-size: 16px;
+    border-radius: 6px;
+}
+
+.todoComponent h3 {
+    padding: 0px 15px 0px 15px;
+}

@@ -1,0 +1,16 @@
+
+.beeComponent{
+    background-color: #CBA328;
+    padding: 10px;
+    border-radius: 6px;
+    display: block;
+    margin: 22px;
+	width: auto;
+	height: auto;
+}
+
+.beeComponent h2 {
+	color: #230C0F;
+	font-family: champagne;
+	margin-left: 20px;
+}
