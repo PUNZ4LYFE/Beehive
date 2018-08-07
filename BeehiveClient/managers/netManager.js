@@ -9,6 +9,7 @@ class NetManager {
 	constructor(dataManager, navManager) {
 		this.dataManager = dataManager;
 		this.navManager = navManager;
+		this.url = 'http://localhost:3000';
 	}
 
 	init() {
@@ -17,7 +18,11 @@ class NetManager {
 
 	requestUsers() {
 		var request = new XMLHttpRequest();
-		request.open('GET', './data/users.json', true);
+		//request.open('GET', './data/users.json', true);
+
+		request.open('GET', this.url + '/users', true);
+		request.setRequestHeader('Access-Control-Allow-Origin', '*'); //solicitar permiso porque viene de otro dominio
+
 		request.onreadystatechange = this.requestUsersCallback.bind(this);
 		request.send();
 	}
@@ -44,7 +49,12 @@ class NetManager {
 
 	requestPosts() {
 		var request = new XMLHttpRequest();
-		request.open('GET', './data/posts.json', true);
+		//request.open('GET', './data/posts.json', true);
+
+		request.open('GET', this.url + '/posts', true);
+		request.setRequestHeader('Access-Control-Allow-Origin', '*'); //solicitar permiso porque viene de otro dominio
+
+
 		request.onreadystatechange = this.requestPostCallback.bind(this);
 		request.send();
 	}
@@ -66,7 +76,11 @@ class NetManager {
 
 	requestComments() {
 		var request = new XMLHttpRequest();
-		request.open('GET', './data/comments.json', true);
+		//request.open('GET', './data/comments.json', true);
+
+		request.open('GET', this.url + '/comments', true);
+		request.setRequestHeader('Access-Control-Allow-Origin', '*'); //solicitar permiso porque viene de otro dominio
+
 		request.onreadystatechange = this.requestCommentsCallback.bind(this);
 		request.send();
 	}
@@ -92,7 +106,10 @@ class NetManager {
 
 	requestTodos() {
 		var request = new XMLHttpRequest();
-		request.open('GET', './data/todos.json', true);
+		//request.open('GET', './data/todos.json', true);
+		request.open('GET', this.url + '/todos', true);
+		request.setRequestHeader('Access-Control-Allow-Origin', '*'); //solicitar permiso porque viene de otro dominio
+
 		request.onreadystatechange = this.requestTodosCallback.bind(this);
 		request.send();
 	}
