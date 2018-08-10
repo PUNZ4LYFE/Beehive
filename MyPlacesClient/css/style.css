@@ -1,0 +1,13 @@
+@font-face {
+    font-family: champagne;
+    src: url(fonts/champagne.ttf);
+}
+
+.venues {
+    background-color: lavenderblush;
+    margin-bottom: 20px;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+    font-family: champagne;
+}
