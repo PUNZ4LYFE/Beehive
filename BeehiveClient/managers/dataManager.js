@@ -11,8 +11,32 @@ class DataManager {
 	*/
 	constructor() {
 		this.bees = [];
+		this.user = {
+			"id": 11,
+			"name": "Karla Porras",
+			"username": "PUNZ4LYFE",
+			"email": "kporras@logosoftla.com",
+			"address": {
+				"street": "Villa de Tulín",
+				"suite": "24F",
+				"city": "San José",
+				"zipcode": "11702",
+				"geo": {
+					"lat": "-37.3159",
+					"lng": "81.1496"
+				}
+			},
+			"phone": "83466643",
+			"website": "",
+			"company": {
+				"name": "Logosoft",
+				"catchPhrase": "Hacemos que su empresa gane",
+				"bs": "idk lol"
+			}
+		};
 		this.selectedBee = null;
 		this.navManager = null;
+		this.netManager = null;
 	}
 
 	addPostToBee(post) {

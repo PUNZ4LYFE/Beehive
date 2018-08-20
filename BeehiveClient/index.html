@@ -17,6 +17,9 @@
 	<script src="components/postComponent.js"></script>
 	<script src="components/commentComponent.js"></script>
 	<script src="components/TodoComponent.js"></script>
+	<script src="components/newPostComponent.js"></script>
+	<script src="components/newCommentComponent.js"></script>
+	<script src="components/newTodoComponent.js"></script>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/appComponent.css">
 	<link rel="stylesheet" href="css/beeComponent.css">
@@ -58,31 +61,31 @@
 	<div id="postModal" class="modal">
 		<div class="modal-content">
 			<span id="close" class="closePost">&times;</span>
-			<input class="inputBee" type="text" placeholder="Title">
-			<textarea placeholder="Body"></textarea>
-			<button id="agregarBee">Agregar Post</button>
+			<input class="inputBee" id="postTitle" type="text" placeholder="Title">
+			<textarea placeholder="Body" id="postBody"></textarea>
+			<button id="agregarPost">Agregar Post</button>
 		</div>
 	</div>
 
 	<div id="toDoModal" class="modal">
 		<div class="modal-content">
 			<span id="close" class="closeToDo">&times;</span>
-			<input class="inputBee" type="text" placeholder="Title">
+			<input id="inputTodo" class="inputBee" type="text" placeholder="Title">
 			<select>
 				<option value="" disabled selected>Status</option>
 				<option value="Completado">Complete</option>
 				<option value="Sin completar">Incomplete</option>
 			</select>
-			<button id="agregarBee">Agregar To Do</button>
+			<button id="agregarTodo">Agregar To Do</button>
 		</div>
 	</div>
 
 	<div id="commentModal" class="modal">
 		<div class="modal-content">
-			<span id="close" class="closePost">&times;</span>
+			<span id="close" class="closeComment">&times;</span>
 			<input class="inputBee" type="text" placeholder="Name">
 			<textarea placeholder="Body"></textarea>
-			<button id="agregarBee">Agregar Comment</button>
+			<button id="agregarComment">Agregar Comment</button>
 		</div>
 	</div>
 

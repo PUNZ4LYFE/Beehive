@@ -19,7 +19,13 @@
 
 .postComponent h3 { 
 	padding: 10px;
+	padding-bottom: 0px;
 	margin-bottom: 0px;
+}
+
+.postComponent p { 
+	padding: 0px 10px 0px 10px;
+	margin-bottom: 15px;
 }
 
 

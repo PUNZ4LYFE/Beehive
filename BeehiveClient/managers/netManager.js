@@ -10,6 +10,7 @@ class NetManager {
 		this.dataManager = dataManager;
 		this.navManager = navManager;
 		this.url = 'http://localhost:3000';
+
 	}
 
 	init() {
@@ -127,4 +128,73 @@ class NetManager {
 			}
 		}
 	}
+
+
+
+
+	postPost(event) {
+		var title = document.getElementById('postTitle').value;
+		var body = document.getElementById('postBody').value;
+		var post = {
+			userId: 11,
+			id: this.postsCounter,
+			title: title,
+			body: body,
+			comments: []
+		}
+		var request = new XMLHttpRequest();
+		//this.url = 'http://localhost:3000';
+		request.open('POST', this.url + '/posts', true);
+		request.setRequestHeader('Access-Control-Allow-Origin', '*');
+		request.setRequestHeader('Content-Type', 'application/json;charset=utf-8');
+		request.onreadystatechange = this.sendPostCallback;
+		request.send(JSON.stringify(post));
+		document.getElementById('postTitle').value = '';
+		document.getElementById('postBody').value = '';
+		this.navManager.showBeePosts;
+	}
+
+	sendPostCallback(event) {
+		var request = event.target;
+		if (request.readyState === XMLHttpRequest.DONE) {
+			if (request.status === 200) {
+				//requestAllPosts();
+			}
+		}
+	}
+
+
+
+
+
+
+
+	postTodo(event) {
+		var title = document.getElementById('inputTodo').value;
+		var todo = {
+			userId: 11,
+			id: this.postsCounter,
+			title: title,
+			completed: false
+		}
+		var request = new XMLHttpRequest();
+		this.url = 'http://localhost:3000';
+		request.open('POST', this.url + '/todos', true);
+		request.setRequestHeader('Access-Control-Allow-Origin', '*');
+		request.setRequestHeader('Content-Type', 'application/json;charset=utf-8');
+		request.onreadystatechange = this.sendTodoCallback;
+		request.send(JSON.stringify(todo));
+		document.getElementById('inputTodo').value = '';
+		this.navManager.showBeePosts;
+	}
+
+	sendTodoCallback(event) {
+		var request = event.target;
+		if (request.readyState === XMLHttpRequest.DONE) {
+			if (request.status === 200) {
+				//requestAllPosts();
+			}
+		}
+	}
+
 }

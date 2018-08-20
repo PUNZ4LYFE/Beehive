@@ -13,18 +13,25 @@ class PostComponent extends Component {
 
 		//Create html elements
 		this.title = document.createElement('h3');
+		this.body = document.createElement('p');
 		this.addCommentBtn = document.createElement('button');
+		this.deletePostBtn = document.createElement('button');
 
 		//Add html elements
 		this.container.appendChild(this.title);
+		this.container.appendChild(this.body);
 		this.container.appendChild(this.addCommentBtn);
+		this.container.appendChild(this.deletePostBtn);
 
 		//Add data to html elements
 		this.title.innerHTML = this.model.title;
+		this.body.innerHTML = this.model.body;
 		this.addCommentBtn.innerHTML = 'ADD COMMENT';
+		this.deletePostBtn.innerHTML = 'DELETE POST';
 
 		//Add event to html elements
 		this.addCommentBtn.onclick = this.addCommentBtnClick.bind(this);
+		this.deletePostBtn.onclick = this.deletePost.bind(this);
 
 		this.addComments();
 
@@ -42,5 +49,9 @@ class PostComponent extends Component {
 		this.model.comments.push(comment);
 		this.dataManager.navManager.showBeePosts();*/
 		document.getElementById(commentModal).style.display = "block";
+	}
+
+	deletePost() {
+
 	}
 }

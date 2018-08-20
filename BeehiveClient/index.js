@@ -14,8 +14,14 @@ function init() {
 	var navManager = new NavManager(dataManager);
 	var netManager = new NetManager(dataManager, navManager);
 	dataManager.navManager = navManager;
+	dataManager.netManager = netManager;
 	netManager.init();
+	var newPostComponent = new NewPostComponent(dataManager);
+
+	document.getElementById('agregarPost').onclick = netManager.postPost.bind(netManager);
+	document.getElementById('agregarTodo').onclick = netManager.postTodo.bind(netManager);
 
 	//2. Initialize variables
 	//3. Program Logic
+
 }
