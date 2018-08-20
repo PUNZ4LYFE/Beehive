@@ -67,7 +67,8 @@ var server = http.createServer((request, response) => { //arrow function
                     break;
 
                 case 'POST':
-                    //postPosts(request, response);
+                    console.log('test');
+                    postPosts(request, response);
                     break;
 
                 case 'PATCH':
@@ -127,7 +128,8 @@ var server = http.createServer((request, response) => { //arrow function
                     break;
 
                 case 'POST':
-                    //postPosts(request, response);
+                    //console.log('posteando todo');
+                    postTodos(request, response);
                     break;
 
                 case 'PATCH':
@@ -155,22 +157,6 @@ var server = http.createServer((request, response) => { //arrow function
 server.listen(port, localhost, function () {
     console.log('El servidor está corriendo :3');
 });
-
-function savePosts(posts) {
-    return new Promise(function (resolve, reject) {
-        fs.writeFile(path.resolve(process.cwd(), './data/posts.json'), JSON.stringify(posts), function (err) {
-            if (err) {
-
-            } else {
-                resolve();
-            }
-        })
-    });
-}
-
-
-
-
 
 function getUsers(request, response) {
     setResponseHeaders(request, response);
@@ -316,9 +302,10 @@ function postPosts(request, response) {
     request.on('end', function () {
         buffer = Buffer.concat(buffer).toString();
         post = JSON.parse(buffer);
+        console.log('Post: ' + post);
 
         loadPosts().then(function (posts) {
-            posts[uniqid()] = post;
+            posts.push(post);
             savePosts(posts).then(function () {
                 response.writeHead(200);
                 response.end();
@@ -334,6 +321,7 @@ function postPosts(request, response) {
 
 function savePosts(posts) {
     return new Promise(function (resolve, reject) {
+        //console.log(posts);
         fs.writeFile(path.resolve(process.cwd(), './data/posts.json'), JSON.stringify(posts), function (err) {
             if (err) {
 
@@ -393,5 +381,52 @@ function deletePost(request, response, key) {
         });
     }).catch(function () {
         send404(request, response);
+    });
+}
+
+
+
+
+
+
+function postTodos(request, response) {
+    setResponseHeaders(request, response);
+    let buffer = [];
+    let todo = null;
+
+    request.on('data', function (chunk) {
+        buffer.push(chunk);
+    });
+
+    request.on('end', function () {
+        buffer = Buffer.concat(buffer).toString();
+        todo = JSON.parse(buffer);
+        console.log(todo);
+
+        loadTodos().then(function (todos) {
+            todos.push(todo);
+            saveTodos(todos).then(function () {
+                response.writeHead(200);
+                response.end();
+            }).catch(function () {
+                send404(request, response);
+            });
+        }).catch(function () {
+            send404(request, response);
+        });
+
+    });
+}
+
+function saveTodos(todos) {
+    return new Promise(function (resolve, reject) {
+        console.log(todos);
+        fs.writeFile(path.resolve(process.cwd(), './data/todos.json'), JSON.stringify(todos), function (err) {
+            if (err) {
+
+            } else {
+                resolve();
+            }
+        })
     });
 }
